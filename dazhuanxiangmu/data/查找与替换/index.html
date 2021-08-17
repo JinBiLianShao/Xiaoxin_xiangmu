@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>查找与替换练习-连思鑫</title>
+<style>
+*{margin:0px;padding:0px;}
+body{text-align:center;}
+#box{width:600px;height:600px;border:1px solid red;display:inline-block;}
+#box form{margin:20px;}
+#box p{margin:20px;}
+span{font-size:16px;color:red;font-weight:bold;}
+</style>
+</head>
+
+<body>
+<div id='box'>
+    <form>
+    <input type='text' name='文本' class='txt'/>
+    <input type='text' name='文本' class='txt'/>
+    <input type='button' value='查找' class='btn'/>
+    <input type='button' value='替换' class='btn'/>
+    </form>
+    <p id='p'>[行程特色] 张家界国家森林公园与一脉相连的索溪峪、天子山两大自然保护区组成武陵源， 是张家界的核心景区。张家界，奇峰三千，秀水八百，张家界的山大多是拔地而起山， 山上峰峻石奇，或玲珑秀丽，或峥嵘可怖，或平展...</p>
+   <script>
+   		var oipt = document.getElementsByTagName("input");
+		var op =document.getElementsByTagName("p")[0];
+		var obtn = document.getElementsByClassName("btn");
+		var str = p.innerHTML;
+		obtn[0].onclick = function(){
+			var	a = oipt[0].value;	
+			var b = str.split(a).join("<span>"+a+"</span>");
+			p.innerHTML = b;			
+		}
+		obtn[1].onclick = function(){
+			var	a = oipt[0].value;	
+			var c = oipt[1].value;
+			var d = str.split(a).join("<span>"+c+"</span>");
+			p.innerHTML = d;
+			}
+   </script>
+</div>
+</body>
+</html>

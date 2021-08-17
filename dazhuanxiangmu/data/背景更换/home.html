@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>照片墙--连思鑫</title>
+<style>
+*{margin:0px;padding:0px;}
+li{list-style:none;}
+#box{width:1200px;height:732px;/*border:1px solid red;*/margin:auto;background:url(images/1.jpg) no-repeat;position:relative;}
+#box1{width:705px;height:590px;/*border:1px solid blue;*/position:absolute;right:0px;top:50%;margin-top:-300px;padding-top:10px;padding-left:95px;}
+#box1 ul li{width:220px;height:130px;float:left;margin-left:10px;margin-top:10px;}
+#box1 ul li img{width:220px;height:130px;border: 2px solid #c0c0c0;box-shadow:2px 2px 3px #333;/*背影水平宽度 垂直宽度 羽化程度 颜色*/}
+#box1 ul li img:hover{transform:rotate(360deg) scale(1.5);transition:transform 1s;border:2px solid #93C;}
+</style>
+</head>;
+
+<body>
+<div id="box">
+	<div id="box1">
+    	<ul>
+        	<li><img src="images/1.jpg" alt=""></li>
+            <li><img src="images/2.jpg" alt=""></li>
+            <li><img src="images/3.jpg" alt=""></li>
+            <li><img src="images/4.jpg" alt=""></li>
+            <li><img src="images/5.jpg" alt=""></li>
+            <li><img src="images/6.jpg" alt=""></li>
+            <li><img src="images/1.jpg" alt=""></li>
+            <li><img src="images/2.jpg" alt=""></li>
+            <li><img src="images/3.jpg" alt=""></li>
+            <li><img src="images/4.jpg" alt=""></li>
+            <li><img src="images/5.jpg" alt=""></li>
+            <li><img src="images/6.jpg" alt=""></li>
+        </ul>
+    </div>
+</div>
+<script>
+	var obox=document.getElementById("box")
+	var oimg=obox.getElementsByTagName("img")
+	for( var i=0;i<oimg.length;i++){
+		oimg[i].onclick=function(){
+			obox.style.backgroundImage="url("+this.src+")"
+			}
+	}
+</script>
+</body>
+</html>
