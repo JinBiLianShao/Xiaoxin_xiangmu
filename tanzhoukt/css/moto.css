@@ -1,0 +1,9 @@
+.moto{width: 46px;position: fixed;right: 130px;bottom: 100px;z-index: 1000;}
+.moto ul{background-color: #ededed;width: 46px;border: 1px solid #d7d7d7;}
+.moto ul > li{border-bottom: 1px solid #d7d7d7;}
+.moto ul > li a.aa1{color: #666;font-size: 15px;display: block;width: 44px;height: 46px;background: url(../img/f1.png) no-repeat center center;background-size: 28px 20px;text-indent: -9999px;text-align: center;line-height: 18px;}
+.moto ul > li a.aa2{color: #666;font-size: 15px;display: block;width: 44px;height: 46px;background: url(../img/f2.png) no-repeat center center;background-size: 24px 27px;text-indent: -9999px;text-align: center;line-height: 18px;}
+.moto ul > li a.aa3{color: #666;font-size: 15px;display: block;width: 44px;height: 46px;background: url(../img/f3.png) no-repeat center center;text-indent: -9999px;text-align: center;line-height: 18px;}
+.moto ul > li a.aa4{color: #666;font-size: 15px;display: block;width: 44px;height: 46px;background: url(../img/f4.png) no-repeat center center;text-indent: -9999px;text-align: center;line-height: 18px;}
+.moto ul > li a:hover{background: none;text-indent: 0px;}
+.moto ul > li a .2rwia{font-size:12px ;position: absolute;width: 190px;border: 1px solid #e4e5e8;right: 45px;top: -46px;padding: 14px;text-align: center;text-indent: 0;display: block;}

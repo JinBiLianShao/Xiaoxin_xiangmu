@@ -1,0 +1,49 @@
+.all{width: 100%;background-color: #f8f8f8;}
+.center{width: 1200px;margin:  auto;transform: translateY(30px);}
+.center .list .list-top{width: 1200px;height: 40px;}
+.center .list .list-top .mor{width: 1050px;height: 40px;border-bottom: 1px solid #ccc;float: right;}
+.center .list .list-top .mor p a{color: #ccc;font-size: 14px;float: right;margin-top: 18px;}
+.center .list .list-top .mor p a:hover{color: #1890FF;}
+.center .list .list-top > p{display:inline-block;margin-top:12px;font-size: 25px;}
+.center .list ul{width: 1200px;height: 500px;display: flex;justify-content: space-between;flex-wrap:wrap ;margin-top: 40px;}
+.center .list ul li{width: 217px;height: 217px;box-shadow: 0px 2px 2px #ccc;transition: 0.5s;}
+.center .list ul li:hover{box-shadow: 0px 2px 2px #ccc;transform: translateY(-15px);}
+.center .list ul li:hover .name a{color: #1890FF;}
+.center .list ul li > a{display: block;width: 217px;height: 130px;background: url(../img/list.png) no-repeat;background-size: 100% 100%;color: white;}
+.center .list ul li > a .zb{width: 74px;height:22px;transform: translate(138px,3px);background: url(../img/bcakground.png) no-repeat;}
+.center .list ul li > a .zb img{margin-left: 8px;}
+.center .list ul li > a .zb span{font-size: 13px;margin-top:2px ;}
+.center .list ul li .name{padding: 10px 10px;}
+.center .list ul li .name a{overflow: hidden;display: block;text-overflow: ellipsis;white-space: nowrap;color: #000000;font-size: 14px;}
+.center .list ul li .name .baoming{margin-top:20px ;}
+.center .list ul li .name .baoming span{font-size: 12px;margin-top:20px ;}
+.center .list ul li .name .baoming span:nth-child(2){margin-left: 70px;color: #19a25d ;}
+.center .list ul li .name .baoming span em{font-style: normal;color: #19a25d;}
+.center-bottom{width: 100%;background-color: white;margin-top:30px ;}
+.center-bottom ul{width:1200px;height: 100px;margin: auto;display: flex;justify-content: flex-start;align-items: center;}
+.center-bottom ul li:nth-child(1){font-weight: bold;}
+.center-bottom ul li.bot-list a{margin-left: 45px;}
+.center-bottom ul li a{color: #000000;font-size: 15px;}
+.all footer{width: 100%;background-color: #f0f0f1;}
+.all footer .bottom{width: 1200px;height:150px ;margin: auto;padding:70px 0px;display: flex;justify-content: space-between;position: relative;}
+.all footer .bottom .bottom-left{width: 600px;height: 150px;background: url(../img/潭州.jpg) no-repeat;}
+.all footer .bottom .bottom-left p:nth-child(1){margin-top: 55px;}
+.all footer .bottom .bottom-left p a{display: inline-block;height: 15px;padding:0px 4px;line-height: 15px;color: #a1a1a3;font-size: 12px;}
+.all footer .bottom .bottom-left p a.a1{border-right:1px solid #a1a1a3;}
+.all footer .bottom .bottom-left p a img{width: 30px;height: 10px;}
+.all footer .bottom .bottom-left p:nth-child(2){color: #a1a1a3;font-size: 12px;margin-top: 10px;}
+.all footer .bottom .bottom-right{width: 600px;height: 150px;background: url(../img/lianxi.jpg) no-repeat;background-position:95% 0% ;display: flex;justify-content: space-between;}
+.all footer .bottom .bottom-right .erweima{width: 310px;height: 150px;border-right: 1px solid #ccc;display: flex;justify-content: space-around;margin-left:30px;align-items: center;position: relative;}
+.all footer .bottom .bottom-right .erweima img{width:105px ;height: 105px;}
+.all footer .bottom .bottom-right .erweima p{font-size: 12px;color: #000000;display: block;width: 72px;text-align: center;margin-left: 17px;line-height: 20px;}
+.all footer .bottom .bottom-right .erweima .img-erweima{width: 130px;height: 150px;}
+.all footer .bottom .bottom-right .pp{height: 20px;width: 180px;display: flex;justify-content: space-between;margin-top: 90px;margin-right: 17px;}
+.all footer .bottom .bottom-right .pp  a.a1:hover img.p1 {display: block;}
+.all footer .bottom  > img{width: 120px;height: 120px;position: absolute;}
+.all footer .bottom  img.p1{left: 81%;top: 10%;display: none;}
+.all footer .bottom  img.p2{left: 90%;top: 10%;display: none;}
+
+
+
+
+

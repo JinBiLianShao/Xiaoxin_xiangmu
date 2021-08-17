@@ -1,0 +1,18 @@
+header{width: 1200px;height: 135px;margin: 0px auto;display: flex;align-items: center;justify-content: space-between;}
+header .img a{background: url(../img/2.png) no-repeat 50% 50%;display: block;width: 208px;height: 135px;}
+header .search form input[type="text"]{outline: none;border: 2px solid #1890ff;width: 400px;height: 40px;float: left;text-indent: 10px;}
+header .search form input[type="submit"]{width:92px ;height: 44px;border: 0;background:linear-gradient(to right,#3073f4,#70b6ff) ;color: white;}
+header .search p a{color: #333;font-size: 12px;padding-right: 15px;}
+header .search p {padding-top: 10px;}
+header .search{padding-top:20px ;clear: both;margin-left: -43px;}
+header .appdownload{width: 177px;height: 63px;margin-left: 20px;}
+header p.denglu{margin-top:10px ;}
+header p.denglu a{color: #333333;font-size: 14px;padding-right: 10px;}
+nav{width: 1200px;height: 50px;margin: 0px auto;display: flex;justify-content: space-between;}
+nav .kecheng{width: 216px;height: 50px;background:linear-gradient(to right,#3073f4,#70b6ff);color: white;font-size: 18px;text-align: center;line-height: 50px;font-weight: bold;position: relative;}
+nav .kecheng::before{content:"";width: 18px;height: 15px;background: linear-gradient(to bottom,#fff 0%,#fff 20%,transparent 20%,transparent 40%,#fff 40%,#fff 60%,transparent 60%,transparent 80%,#fff 80%,#fff 100%);display:inline-block;position: absolute;top:17px;left:40px}
+nav ul li a{color: #333;font-size: 18px;}
+nav ul{margin-left: -300px;}
+nav ul li a:hover{color: #1890FF;}
+nav ul li{float: left;margin-left:67px ;padding-top: 15px;}
+nav .img1{width: 177px;height: 49px;background: url(../img/3.png) no-repeat;margin-right: 20px;}
