@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>京东官网图片轮播效果-连思鑫</title>
+		<style type="text/css">
+			* {
+				padding: 0px;
+				margin: 0px;
+			}
+
+			li {
+				list-style: none;
+			}
+
+			@font-face {
+				font-family: 'iconfont';
+				src: url('icon/iconfont.eot');
+				src: url('icon/iconfont.eot?#iefix') format('embedded-opentype'),
+					url('icon/iconfont.woff') format('woff'),
+					url('icon/iconfont.ttf') format('truetype'),
+					url('icon/iconfont.svg#iconfont') format('svg');
+			}
+			.iconfont {
+				font-family: "iconfont" !important;
+				font-size: 20px;
+				font-style: normal;
+				-webkit-font-smoothing: antialiased;
+				-webkit-text-stroke-width: 0.2px;
+				-moz-osx-font-smoothing: grayscale;
+			}
+
+			#nav {
+				width: 590px;
+				height: 470px;
+				margin: 10px auto;
+				position: relative;
+			}
+
+			#nav img {
+				position: absolute;
+				opacity: 0;
+				transition: opacity 2s linear;
+			}
+			#nav .display{
+				opacity: 1;
+			}
+			#nav .btn {
+				width: 24px;
+				height: 40px;
+				position: absolute;
+				top: 50%;
+				margin-top: -20px;
+				background-color:rgba(0,0,0,.2) ;
+				cursor: pointer;
+				text-align: center;
+				line-height: 40px;
+				transition: background-color 1s ease;
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select:none;
+				-moz-user-select:none;
+				-ms-user-select:none;
+				user-select:none;
+			}
+
+			#nav .btn:hover {
+				background-color: rgba(0, 0, 0, .5);
+			}
+
+			#nav .left {
+				color:hsla(0,0%,100%,.4);
+			}
+
+			#nav .right {
+				right: 0px;
+				color:hsla(0,0%,100%,.4);
+			}
+
+			#nav ul {
+				width: 152px;
+				height: 18px;
+				position: absolute;
+				bottom: 30px;
+				left: 50px;
+			}
+
+			#nav ul li {
+				width: 10px;
+				height: 10px;
+				float: left;
+				border-radius: 50%;
+				border: 2px solid white;
+				margin-left: 3px;
+				cursor: pointer;
+			}
+			#nav ul li.one {
+				background-color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="nav">
+			<img src='img/1.jpg' width="590" height="470" alt='' class='display'>
+			<img src='img/2.jpg' width="590" height="470" alt=''>
+			<img src='img/3.jpg' width="590" height="470" alt=''>
+			<img src='img/4.jpg' width="590" height="470" alt=''>
+			<img src='img/5.jpg' width="590" height="470" alt=''>
+			<img src='img/6.jpg' width="590" height="470" alt=''>
+			<img src='img/7.jpg' width="590" height="470" alt=''>
+			<img src='img/8.jpg' width="590" height="470" alt=''>
+			<p class='left btn'><i class="iconfont">&#xf0343;</i></p>
+			<p class='right btn'><i class="iconfont">&#xf0344;</i></p>
+			<ul>
+				<li class='one'></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+// 			var img = document.getElementsByTagName("img");
+// 			var btn = document.getElementsByClassName("btn");
+// 			var li = document.getElementsByClassName("one");
+			//alert(li.length)
+//			var j = 0;
+// 			btn[1].onclick = function() {
+// 				
+// 				for (var i = 0; i < img.length; i++){
+// 					img[i].style = "display:none";
+// 				}
+// 				if (j<7){
+// 					j++;
+// 				}else{
+// 					j=0;
+// 				}
+// 				img[j].style = "display:block";
+// 			}
+// 			btn[0].onclick = function() {
+// 				for (var i = 0; i < img.length; i++) {
+// 					img[i].style = "display:none";
+// 				}
+// 				if (j < 0) {
+// 					j = img.length-1;
+// 				}
+// 				j--;
+// 				img[j].style = "display:block";
+// 			}
+			
+			var div = document.getElementById("nav");
+			var left =  document.querySelector("#nav p.left");
+			var right =  document.querySelector("#nav p.right")
+			var img = document.querySelectorAll("#nav img");
+			var li = document.querySelectorAll("#nav li");
+			var timer = null;
+			var len = img.length;
+			//alert(btn);
+			div.onmouseover = function(){
+				clearInterval(timer);
+			}
+			div.onmouseout = function(){
+				auto();
+			}
+			var index = 0;
+			right.onclick = function(){
+				img[index].className = "none"
+				li[index].className = "none";
+				index++;
+				index%=len;
+				img[index].className = "display";
+				li[index].className = "one";
+			}
+			left.onclick = function(){
+				img[index].style.display='none';
+				li[index].className = "none";
+				index--;
+				if(index<0){
+					index =len-1;
+				}
+				img[index].className = "display";
+				li[index].className = "one";
+			}
+			
+				for(var i = 0;i<len;i++){
+					li[i].j = i;
+					li[i].onmousemove = function(){
+						img[index].className= "none";
+						li[index].className = "none";
+						index = this.j;
+						li[index].className = "one";
+						img[index].className = 'display';
+					}
+			}
+			
+			//一般会定义一个函数来进行鼠标移出播放
+			function auto(){
+				//应以一个函数用来清除定时器
+			timer = setInterval(function(){
+				img[index].className = "none";
+				li[index].className = "none";
+				index++;
+				index%=len;
+				img[index].className = 'display';
+				li[index].className = "one";
+			},3000)
+			}
+			//回调函数
+			auto();
+			function chall(all){
+				img[index].className = "none";
+				li[index].className = "none";
+				if(all==1){
+					index++;
+					index%=len;
+				}else if(all==2){
+					index--;
+					if(index<0){
+						index =len-1;
+					}
+				}else if(all==3){
+					index = this.j;
+				}
+				
+				
+				img[index].className = 'display';
+				li[index].className = "one";
+			}
+		</script>
+	</body>
+</html>
