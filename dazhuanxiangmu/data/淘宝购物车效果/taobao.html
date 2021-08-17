@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>淘宝购物车-连思鑫</title>
+		<style type="text/css">	
+			*{
+				padding: 0px;
+				margin: 0px;
+			}
+			table{
+				width: 900px;
+				margin: 50px auto;
+				border: 1px solid #ccc;
+				border-collapse: collapse;
+			}
+			table th,td{
+				width: 50px;
+				height: 58px;
+				border: 1px solid #ccc;
+				text-align: center;
+			}
+			table th{
+				background-color: rgb(204,51,102);
+				color:white;
+			}	
+			table img{
+				width: 100px;
+				height: 100px;
+			}
+			table td{
+				width: 82px;
+				height: 100px;
+			}
+			table input{
+				width:78px;
+				height: 15px;
+				text-align: center;
+			}
+			table button{
+				width: 25px;
+				height: 19px;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<th>商品</th>
+				<th>单价</th>
+				<th>数量</th>
+				<th>小计</th>
+			</tr>
+			<tr>
+				<td><img src="img/1.jpg" width="178" height="240" alt='照相机' /></td>
+				<td class='danjia'>30</td>
+				<td><button class="left">-</button><input type="text" value='0' class='ipt'><button class="right">+</button></td>
+				<td class='xiaoji'>0</td>
+			</tr>
+			<tr>
+				<td><img src="img/2.jpg" width="333" height="340" alt='手机' /></td>
+				<td class='danjia'>50</td>
+				<td><button class="left">-</button><input type="text" value='0' class='ipt'><button class="right">+</button></td>
+				<td class='xiaoji'>0</td>
+			</tr>
+			<tr>
+				<td><img src="img/3.jpg" width="427" height="240" alt='电脑'  /></td>
+				<td class='danjia'>120</td>
+				<td><button class="left">-</button><input type="text" value="0" class='ipt'><button class="right">+</button></td>
+				<td class='xiaoji'>0</td>
+			</tr>
+			<tr>
+				<td><img src="img/4.jpg" width="315" height="240" alt='ipad' /></td>
+				<td class='danjia'>50</td>
+				<td><button class="left">-</button><input type="text" value="0" class='ipt'><button class="right">+</button></td>
+				<td class='xiaoji'>0</td>
+			</tr>
+			<tr>
+				<th colspan="2">已选中的商品:<span class='left_buttom'>0</span>个</th>
+				<th colspan="2">合计费用:&#165 <span class='right_buttom'>0</span>元</th>
+			</tr>
+		</table>
+		<script type="text/javascript">
+			var left = document.getElementsByClassName("left");
+			var right = document.getElementsByClassName("right");
+			var left_bottom = document.getElementsByClassName("left_buttom")[0];
+			var right_buttom = document.getElementsByClassName("right_buttom")[0];
+			var ipt = document.getElementsByClassName("ipt");
+			var danjia = document.getElementsByClassName("danjia");
+			var xiaoji = document.getElementsByClassName("xiaoji");
+			//alert(left.length);
+			var len = ipt.length;
+			for(var i=0;i<len;i++){
+				right[i].index = i;
+				left[i].index = i;
+				right[i].onclick = function(){
+					ipt[this.index].value++;
+					xiaoji[this.index].innerHTML = danjia[this.index].innerHTML * ipt[this.index].value;
+					count();
+				}
+				left[i].onclick = function(){
+					ipt[this.index].value--;
+					if(ipt[this.index].value<0){	
+						ipt[this.index].value = 0;
+						alert("对不起，商品的数值不能小于0");
+					}
+					xiaoji[this.index].innerHTML = danjia[this.index].innerHTML * ipt[this.index].value;
+					count();
+				}
+			}
+			function count(){
+				var j = 0;
+				var a = 0;
+				for (var i=0;i<ipt.length;i++) {
+					j += ipt[i].value*1;
+					a += xiaoji[i].innerHTML*1;
+				}
+				left_bottom.innerHTML = j;
+				right_buttom.innerHTML = a;
+			}
+		
+		</script>
+	</body>
+</html>

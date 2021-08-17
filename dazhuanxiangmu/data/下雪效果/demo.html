@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>下雪效果-连思鑫</title>
+		<style type="text/css">
+			*{
+				padding: 0px;
+				margin: 0px;
+			}
+			li{
+				list-style: none;
+			}
+			#top{
+				width: 100%;
+				height: 315px;
+				background: url(images/header-bg.png);
+			}
+			#top .top2{
+				width: 100%;
+				height: 235px;
+				background: url(images/snow-bg.png);
+				animation: top2 3s linear infinite;
+			}
+			@keyframes top2{
+				0% { background-position: 0 0;}
+				100% { background-position: 235px 235px;}
+			}
+			#nav{
+				width: 100%;
+				height: 111px;
+				background: url(images/con-bg.png);
+				position: absolute;
+				top: 218px;
+			}
+			#nav  .shu1{
+				position: absolute;
+				top: -20px;
+				left: 24%; 
+			}
+			#nav  .shu2{
+				position: absolute;
+				top: -50px;
+				left: 33%;
+			}
+			#nav .shu3{
+				position: absolute;
+				top:-30px;
+				left:43%;
+			}
+			#nav  .shu4{
+				position: absolute;
+				top: -30px;
+				right:30%;
+			}
+			#nav  .shu5{
+				position: absolute;
+				top: -50px;
+				right:20%;
+			}
+			#nav .xueren{
+				position: absolute;
+				top: 24px;
+				left: 52%;
+			}
+			#bottom{
+				width: 100%;
+				height: 50px;
+				position: absolute;
+				top: 50%;
+				left: 28%;
+				color: dodgerblue;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="top">
+			<div class="top2">
+			</div>
+		</div>
+		<div id="nav">
+				<img src='images/tree.png' alt='圣诞树' class='shu1'>
+				<img src='images/tree.png' alt='圣诞树' class="shu2">
+				<img src='images/tree.png' alt='圣诞树' class='shu3'>
+				<img src="images/ice.png" alt='雪人' class='xueren'>
+				<img src='images/tree.png' alt='圣诞树' class='shu4'>
+				<img src='images/tree.png' alt='圣诞树' class="shu5">
+		</div>
+		<div id="bottom">
+			<h2>江苏农林职业技术学院-信息工程学院-17计算机应用技术(软件)-连思鑫</h2>
+		</div>
+		
+		<!--<script type="text/javascript">
+			var tp = document.getElementsByClassName("top2");
+			var t = 0;
+			setInterval(function(){
+				t++;
+				tp[0].style.backgroundPositionY = t + "px";
+			},10)
+		</script> -->
+	</body>
+</html>
