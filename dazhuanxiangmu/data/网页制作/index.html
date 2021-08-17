@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>网页制作-栏目页-连思鑫</title>
+		<style type="text/css">
+			body,li,ul,img,p,a,h2,div{
+				margin: 0px;
+				padding: 0px;
+			}
+			body{
+				font-family: "微软雅黑";
+				font-size: 14px;
+			}
+			a{
+				text-decoration: none;
+				font-size: 14px;
+				color: black;
+			}
+			li{
+				list-style: none;
+			}
+			a:hover{
+				color:red;
+			}
+			#logo{
+				width:1200px;
+				height: 131px;
+				margin: 0px auto;
+				position: relative;
+			}
+			#logo .logo2{
+				width: 740px;
+				height: 131px;
+				background: url(images/title2.png) no-repeat;
+			}
+			#logo .logo3{
+				width:460px;
+				height:130px;
+				background: url(images/youth5.jpg) no-repeat;
+				position: absolute;
+				top:1px;
+				right: 0px;
+			}
+			#logo p{
+				position: absolute;
+				top:68px;
+				left: 136px;
+				font-size:16px;
+				color: #f7aa10;
+				font-family: "微软雅黑";
+			}
+			
+			
+			#bg{
+				width: 100%;
+				height: 350px;
+				background: url(images/bg.gif);
+				margin: 0px auto;
+			}
+			#bg .dh{
+				width:1200px;
+				height:40px;
+				margin: 0px auto;
+			}
+			#bg > .dh > li{
+				width: 132px;
+				height: 41px;
+				float: left;
+				line-height:40px;
+				text-align: center;
+				position: relative;
+			}
+			#bg > .dh > li:hover{
+				background:rgba(0,0,0,.3);
+				cursor: pointer;
+				font-weight:bold;
+			}
+			#bg > .dh > li > a{
+				color: white;
+				font-size: 15px;
+				font-family: "楷体";
+			}
+			#bg > .dh > li > .cd{
+				position:absolute;
+				display:none;
+			}
+			#bg > .dh > li:hover > .cd {
+				display:block;
+				width: 100%;
+				left:0px;
+				z-index: 99;
+			}
+			#bg > .dh > li:hover > .cd li{
+				background: rgb(50,130,30);
+			}
+			#bg > .dh > li:hover > .cd li:hover{
+				background: rgb(104,187,55);
+			}
+			#bg > .dh > li:hover > .cd li a:hover{
+				color:rgba(255,255,255,.5);
+			}
+			#bg .tp{
+				width:1200px;
+				height:280px;
+				margin: 0px auto;
+				margin-top:2px;
+				position: relative;
+			}
+			#bg .tp img{
+				width: 1200px;
+				height: 280px;
+				position: absolute;
+				display: none;
+			}
+			#bg .tp ul{
+				width: 80px;
+				height: 16px;
+				position: absolute;
+				bottom:10px;
+				right: 20px;
+			}
+			#bg .tp ul.sz li{
+				width: 15px;
+				height: 15px;
+				background: white;
+				float:left;
+				line-height: 14px;
+				text-align: center;
+				margin-left: 5px;
+				cursor: pointer;
+			}
+			#bg .tp ul.sz li.on{
+				color: red;
+				background: #FFE1E1;
+			}
+			
+			
+			
+			#content .clear{
+				clear: both;
+			}
+			#content{
+				width:1200px;
+				height:660px;
+				margin: 10px auto;
+			}
+			#content .left{
+				width: 820px;
+				height: 660px;
+				float:left;
+			}
+			#content .left .op{
+				width: 820px;
+				height:20px;
+				padding-left:10px;
+				padding-top:20px;
+				border-bottom: 3px solid rgba(35,138,83,1);
+			}
+			#content .leftbottom{
+				width: 800px;
+				height: 577px;
+				margin-top: 20px;
+				padding:10px;
+				position: relative;
+			}
+			#content .leftbottom  li{
+				padding-left: 50px;
+				line-height: 400%;
+				background: url(images/arrow.gif) no-repeat 10px center;
+			}
+			#content .leftbottom span{
+				float: right;
+			}
+			#content .right{
+				width:350px;
+				height: 660px;
+				float:right;
+			}
+			#content .right .top{
+				width: 350px;
+				height: 52px;
+				background: url(images/listbg1.png);
+			}
+			#content .right .top h2{
+				color: #fff;
+				line-height: 52px;
+				text-align: center;
+			}
+			#content .right .top ul li{
+				width:320px;
+				height:39px;
+				line-height: 39px;
+				padding-left: 35px;
+				background: url(images/num.png) no-repeat;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				margin-bottom: 10px;
+			}
+			#content .right .top ul li:nth-child(1){
+				    background-position-y: 13px;
+			}
+			#content .right .top ul li:nth-child(2){
+					background-position-y: -17px;
+			}
+			#content .right .top ul li:nth-child(3){
+					background-position-y: -47px;
+			}
+			#content .right .top ul li:nth-child(4){
+					background-position-y: -76px;
+			}
+			#content .right .top ul li:nth-child(5){
+					background-position-y: -107px;
+			}
+			#content .right .top ul li:nth-child(6){
+					background-position-y: -137px;
+			}
+			#content .right .bottom{
+				width:350px;
+				height: 372px;
+				margin-top: 300px;
+			}
+			#content .right .bottom{
+				width: 350px;
+				height: 52px;
+				background: url(images/listbg1.png);
+			}
+			#content .right .bottom h2{
+					color: #fff;
+					line-height: 52px;
+					text-align: center;
+			}
+			#content .right .bottom ul li{
+				margin-top: 20px;
+				line-height: 20px;
+				padding-left: 25px;
+				background: url(images/arrow1.jpg) no-repeat 10px center;
+			}
+			
+			
+			
+			#botton{
+				width: 100%;
+				height:208px;
+				position: relative;
+			}
+			#botton .bottontop{
+				width: 100%;
+				height: 56px;
+				background: #037240;
+			}
+			#botton .bottontop .btn{
+				width:820px;
+				height: 56px;
+				margin: 0px auto;
+			}
+			#botton .bottontop .btn li{
+				float: left;
+				line-height: 56px;
+			}
+			#botton .bottontop .btn li a{
+				font-size: 10pt;
+				color: #fff;
+				font-family: "宋体";
+			}
+			#botton .bottontop .btn li a:hover{
+				color: rgb(55,178,214);
+			}
+			#botton .bottontop .btn li span{
+				padding: 4px;
+				color: #fff;
+				font-weight: bold;
+			}
+			#botton .bottontop .btnbottom{
+				width: 900px;
+				height: 100px;
+				margin: 30px 0px 0px 150px;
+			}
+			#botton .bottontop .btnbottom li{
+				font-family: "微软雅黑";
+				font-size: 12px;
+				line-height: 25px;
+				color: #666;
+			}
+			#botton .bottontop .btnright1{
+				position: absolute;
+				top: 85px;
+				right: 326px;
+			}
+			#botton .bottontop .btnright2{
+				position: absolute;
+				top: 85px;
+				right: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id='logo'>
+			<div class='logo2'></div>
+			<div class='logo3'></div>
+			<p>	·创 新 激 扬 青 春  ·创 业 成 就 未 来</p>
+		</div>
+			<div id='bg'>
+				<ul class='dh'>
+					<li><a href='#'>网站首页</a></li>
+					<li><a href='#'>学院概况</a>
+						<ul class='cd'> 
+							<li><a href="#">学院简介</a></li>
+							<li><a href="#">现任领导</a></li>
+							<li><a href="#">专家团队</a></li>
+						</ul>
+					</li>
+					<li><a href='#'>创新创业课堂</a>
+						<ul class='cd'> 
+							<li><a href="#">通识课程学习</a></li>
+							<li><a href="#">创新训练中心</a></li>
+							<li><a href="#">创业训练中心</a></li>
+						</ul>
+					</li>
+					<li><a href='#'>创新创业活动</a>
+						<ul class='cd'> 
+							<li><a href="#">创新创业大赛</a></li>
+							<li><a href="#">创新创业活动</a></li>
+							<li><a href="#">创新创业项目</a></li>
+							<li><a href="#">创新创业拓展</a></li>
+						</ul>
+					</li>
+					<li><a href='#'>创新发明知识</a>
+						<ul class='cd'> 
+							<li><a href="#">专业申请</a></li>
+							<li><a href="#">论文发表</a></li>
+							<li><a href="#">发明创造</a></li>
+						</ul>
+					</li>
+					<li><a href='#'>创新扶持政策</a>
+						<ul class='cd'> 
+							<li><a href="#">国家政策</a></li>
+							<li><a href="#">地方政策</a></li>
+							<li><a href="#">学校政策</a></li>
+						</ul>
+					</li>
+					<li><a href='#'>创新创业孵化</a>
+						<ul class='cd'> 
+							<li><a href="#">大学生创业园</a></li>
+							<li><a href="#">新禾创客空间</a></li>
+							<li><a href="#">校外孵化平台</a></li>
+							<li><a href="#">创新创业拓展</a></li>
+						</ul>
+					</li>
+					<li><a href='#'>创新创业故事</a>
+						<ul class='cd'> 
+							<li><a href="#">大咖的故事</a></li>
+							<li><a href="#">创客的故事</a></li>
+							<li><a href="#">学长的故事</a></li>
+						</ul>
+					</li>
+					<li><a href='#'>关于我们</a>
+						<ul class='cd'> 
+							<li><a href="#">联系我们</a></li>
+							<li><a href="#">交通指引</a></li>
+							<li><a href="#">服务建议</a></li>
+						</ul>
+					</li>
+				</ul>
+				<div class='tp'>
+					<img src="images/01.jpg" alt='学生实验' style="display: block;">
+					<img src="images/02.jpg" alt='学生'>
+					<img src="images/03.jpg" alt='学生实'>
+					<img src="images/04.jpg" alt='学生起舞'> 
+					<ul class='sz'>
+						<li class='on'>1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+					</ul>
+				</div>
+			</div>
+
+			<div id="content">
+				<div class='left'>
+					<p class='op'>您当前位置&gt;&gt;:<a href='#'>网页首页</a>&gt;&gt;通知公告</p>
+					<ul class='leftbottom'>
+						<li ><a href='#' title="第七届大学生创新创业大赛决赛暨“互联网+”创新创业大赛第七届省赛选拔赛">第七届大学生创新创业大赛决赛暨“互联网+”创新创业大赛第七届省赛选拔赛</a><span>2018-05-11</span></li>
+					
+						<li><a href='#' title="“互联网+”大学生创新创业大赛训练营">“互联网+”大学生创新创业大赛训练营</a><span>	2018-05-03</span></li>
+						
+						<li><a href='#' title="句容市2018“福地青年英才”创业大赛公告">句容市2018“福地青年英才”创业大赛公告</a><span>2018-05-03 </span></li>
+						
+						<li><a href='#' title="关于做好2018年江苏省“双创计划”申报工作的通知">关于做好2018年江苏省“双创计划”申报工作的通知</a><span>2018-05-03 </span></li>
+						
+						<li><a href='#' title="关于做好2018年省大学生创新创业训练计划项目申报工作的通知">关于做好2018年省大学生创新创业训练计划项目申报工作的通知</a><span>2018-05-02</span></li>
+					
+						<li><a href='#' title="关于大学生创业园入驻店铺考核的通知">关于大学生创业园入驻店铺考核的通知  </a><span>	2017-09-11</span></li>
+						
+						<li><a href='#' title="预告|启迪之星（句容）梦想课堂第四期——商业计划书与融资路演">预告|启迪之星（句容）梦想课堂第四期——商业计划书与融资路演</a><span>2017-06-12 </span></li>
+						
+						<li><a href='#' title="预告|启迪之星（句容）梦想课堂第三期——产品市场营销及推广">预告|启迪之星（句容）梦想课堂第三期——产品市场营销及推广</a><span>2017-05-25</span></li>
+						
+						<li><a href='#' title="报名啦！句容市“福地青年英才”计划公告">报名啦！句容市“福地青年英才”计划公告</a><span>2017-05-18</span></li>
+					
+						<li><a href='#' title="预告|启迪之星梦想课堂第二期——核心团队的打造和管理">预告|启迪之星梦想课堂第二期——核心团队的打造和管理</a><span>2017-05-09</span></li>
+					</ul>
+				</div>
+				<div class='right'>
+						<div class='top'>
+							<h2>热门文字</h2>
+							<ul>
+								<li><a href='' title="四季鲜菌菇坊">四季鲜菌菇坊</a><span><img src='images/007.gif' alt='火花图片'></span></li>
+								<li><a href="" title="阿尔法文化传媒工作室">阿尔法文化传媒工作室</a><span><img src='images/007.gif' alt='火花图片'></span></li>
+								<li><a href="" title="梦想快递中心">梦想快递中心</a><span><img src='images/007.gif' alt='火花图片'></span></li>
+								<li><a href="" title="我校学子在江苏省第十二届大学生职业规划大赛中荣获佳绩">我校学子在江苏省第十二届大学生职业规划大赛中荣获佳绩</a></li>
+								<li><a href="" title="园林VR系统">园林VR系统</a><span><img src='images/007.gif' alt='火花图片'></span></li>
+								<li><a href="" title="我校师生在“中牧杯”全国“互联网+”现代农牧业创新创业大赛中喜获佳绩">我校师生在“中牧杯”全国“互联网+”现代农牧业创新创业大赛中喜获佳绩</a></li>
+							</ul>
+						</div>
+						<div class='bottom'>
+							<h2>联系我们</h2>
+							<ul>
+								<li>地址：江苏省句容市文昌东路19号</li>
+								<li>服务热线：400-800-0999</li>
+								<li>电话：0511-87290222</li>
+								<li>传真：0511-87290222</li>
+								<li>邮编：212400</li>
+								<li>公众微信号：双创农林</li>
+							</ul>
+						</div>
+				</div>
+				<div class='clear'></div>
+			</div>
+			<div id='botton'>
+				<div class='bottontop'>
+					<ul class='btn'>
+						<li><a href=''>全国大学生创业服务网</a><span>|</span></li>
+						<li><a href=''>江苏省大学生创新创业训练计划平台</a><span>|</span></li>
+						<li><a href=''>江苏省大学生创业教育网</a><span>|</span></li>
+						<li><a href=''>中国大学生网</a><span>|</span></li>
+						<li><a href=''>中国创业学院</a><span>|</span></li>
+						<li><a href=''>大学生创业网</a></li>
+					</ul>
+					<ul class='btnbottom'>
+						<li>所在地址：江苏省句容市江苏农林职业技术学院南校区创客空间 邮编：212400</li>
+						<li>电子邮件：cxcyxy@jsafc.edu.cn 电话：0511-87290222 传真：0511-87290222</li>
+						<li>Copyright ©2007-2018 新禾创新创业学院 Rights Reserved <img src='images/logo_down.jpg' width='20' height="20"></li>
+					</ul>
+					<img src='images/1.png' width='80' height="80" class='btnright1' alt='微信公众号'> 
+					<img src='images/5.jpg' width='80' height="80" class='btnright2' alt='微信公众号'>
+				</div>
+			</div>
+	</body>
+</html>
