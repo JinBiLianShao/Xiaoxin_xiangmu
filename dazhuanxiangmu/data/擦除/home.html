@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>擦除--连思鑫</title>
+<style>
+*{margin:0px;padding:0px;}
+#box{width:988px;height:1300px;margin:0px auto;background:url("images/s.jpg") no-repeat;background-size:cover;padding:4px;overflow:hidden;}
+#box .box1{width:50px;height:50px;background:rgb(0,0,0);margin:1px;float:left;transition:background 1.5s;}
+</style>
+</head>
+
+<body>
+<div id="box">
+	
+</div>
+<script>
+	var obox=document.getElementById("box")
+	var centent="";
+	for( var i=0;i<=487;i++){
+		centent+="<div class='box1'></div>"
+		}
+		obox.innerHTML=centent;	
+	var obox1=document.getElementsByClassName("box1")
+	for(var i=0;i<=487;i++){
+		obox1[i].onmouseover=function(){
+			this.style.background="none";
+			this.style.margin="0";
+			this.style.border="1px solid #666"
+			}
+		}	
+</script>
+</body>
+</html>
